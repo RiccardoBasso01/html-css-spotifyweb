@@ -1,0 +1,36 @@
+/* 
+XS	<576 pixel
+S	≥576 pixel
+M	≥768px
+L	≥992 pixel
+XL	≥1200 pixel
+XXL	≥1400 pixel */
+
+/* SITO TABLET */
+@media screen and (min-width:576px){
+    aside{
+        flex: 0 0 300px;
+    }
+    
+    .header{
+        height: var(--h-header);
+    }
+
+    aside li{
+        justify-content: flex-start;
+    }
+
+    aside .description{
+        display: inline-block;
+    }
+
+    #logo-small{
+        display: none;
+    }
+
+    #logo{
+        display: inline-block;
+        height: 50px;
+    }
+}
+
