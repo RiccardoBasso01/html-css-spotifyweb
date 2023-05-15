@@ -8,22 +8,26 @@ XXL	≥1400 pixel */
 
 /* SITO TABLET */
 @media screen and (min-width:576px){
-    aside{
-        flex: 0 0 300px;
+    .sidebar{
+        flex: 0 0 250px;
     }
     
     .header{
         height: var(--h-header);
+        display: flex;
+        align-items: center;
     }
 
-    aside li{
+    /* cambio lista sidebar */
+    .sidebar li{
         justify-content: flex-start;
     }
 
-    aside .description{
+    .sidebar .description{
         display: inline-block;
     }
 
+    /* cambio logo spotify */
     #logo-small{
         display: none;
     }
@@ -34,3 +38,16 @@ XXL	≥1400 pixel */
     }
 }
 
+/* SITO LAPTOP */
+@media screen and (min-width: 768px){
+    .music-list li{
+        flex-basis: 25%;
+    }
+}
+
+/* SITO DESKTOP */
+@media screen and (min-width: 1200px){
+    .music-list li{
+        flex-basis: calc(100% / 6);
+    }
+}

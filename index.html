@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-    <div class="display-flex">
-        <aside>
+    <div id="main-container" class="display-flex">
+        <div class="sidebar">
             <div class="header">
                 <img id="logo-small" src="img/logo-small.svg" alt="logo-small">
                 <img id="logo" src="img/logo.svg" alt="logo">
@@ -29,15 +29,147 @@
                     </div>
                     <div class="description">Home</div>
                 </li>
+                <li>
+                    <div class="icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                    <div class="description">Home</div>
+                </li>
+                <li>
+                    <div class="icon">
+                        <i class="fa-solid fa-book"></i>
+                    </div>
+                    <div class="description">Home</div>
+                </li>
             </ul>
-        </aside>
+        </div>
 
-        <div class="grow-1">
+        <div class="spotify-main-content grow-1">
+            <!-- HEADER -->
             <header>
-                
+                <div class="button">
+                    <a href="#">Effettua l'upgrade</a>
+                </div>
             </header>
+
+            <!-- MAIN -->
             <main>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, iste recusandae. Illo corrupti accusantium provident earum eius architecto fuga minima blanditiis, magnam at tenetur aliquid sapiente maxime animi consequuntur? Dignissimos.
+                <ul class="spotify-main-menu display-flex">
+                    <li><a href="#">IN EVIDENZA</a></li>
+                    <li><a href="#">PODCAST</a></li>
+                    <li><a href="#">CLASSIFICHE</a></li>
+                    <li><a href="#">GENERI E MOOD</a></li>
+                    <li><a href="#">NUOVE USCITE</a></li>
+                    <li><a href="#">SCOPRI</a></li>
+                </ul>
+
+                <h2>Ascoltate di recente</h2>
+                <ul class="music-list display-flex">
+                    <li>
+                        <a href="#">
+                            <div class="music-list-item display-flex">
+                                <img src="img/metal_lifting.jpg" alt="playlist">
+                                <h4>Heavy Metal</h4>
+                                <span>Playlist • Spotify</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <div class="music-list-item display-flex">
+                                <img src="img/stranger.jpeg" alt="playlist">
+                                <h4>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h4>
+                                <span>Kyle Dixan & Michael Stein</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <div class="music-list-item display-flex">
+                                <img src="img/aquietplace.jpeg" alt="playlist">
+                                <h4>A Quiet Place</h4>
+                                <span>Marco Beltrami</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <div class="music-list-item display-flex">
+                                <img src="img/split.jpeg" alt="playlist">
+                                <h4>Split</h4>
+                                <span>West ylan Thordson</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <div class="music-list-item display-flex">
+                                <img src="img/cure.jpeg" alt="playlist">
+                                <h4>A Cure For Wellness</h4>
+                                <span>Benjamin Wallfish</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <div class="music-list-item display-flex">
+                                <img src="img/sinister.jpeg" alt="playlist">
+                                <h4>Sinister</h4>
+                                <span>Christopher Young</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <h2>Creato per John Doe</h2>
+                <span>Più ascolti, più accurati saranno i suggerimenti</span>
+                <ul class="music-list display-flex">
+                    <li>
+                        <a href="#">
+                            <div class="music-list-item display-flex">
+                                <img src="img/radar.jpeg" alt="playlist">
+                                <h4>Release Radar</h4>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">
+                            <div class="music-list-item display-flex">
+                                <img src="img/mixdaily.jpeg" alt="playlist">
+                                <h4>Daily Mix 1</h4>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <h2>Artisti più popolari</h2>
+                <span>Più ascolti, più accurati saranno i suggerimenti</span>
+                <ul class="music-list display-flex">
+                    <li>
+                        <a href="#">
+                            <div class="music-list-item artist display-flex">
+                                <img src="img/youg.jpeg" alt="playlist">
+                                <h4>Lana Del Rey</h4>
+                            </div>
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="#">
+                            <div class="music-list-item artist display-flex">
+                                <img src="img/einaudi.jpeg" alt="playlist">
+                                <h4>Ludovico Einaudi</h4>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                
             </main>
         </div>
     </div>
