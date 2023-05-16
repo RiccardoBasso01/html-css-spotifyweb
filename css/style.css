@@ -43,7 +43,7 @@ body{
     --g-20: 20px;
 
     --grigio-0: #080b1287;
-    --grigio-1: #3c3c3c;
+    --grigio-1: #282828;
     --grigio-2: #5b5b5b;
     --grigio-3: #757575;
     --grigio-4: #a9a9a9;
@@ -59,8 +59,12 @@ body{
     align-items: center;
 }
 
+.jc-center{
+    justify-content: center;
+}
+
 .grow-1{
-    flex-grow: 1;
+    flex-grow: 2;
 }
 
 .wrap{
@@ -132,12 +136,15 @@ h2{
     margin: 10px 0;
 }
 
+.sidebar a:not(:last-child){
+    color: var(--grigio-4);
+}
+
 .sb-icon{
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: var(--font-size-l);
-    color: var(--grigio-4);
     flex: 0 0 25px;
 }
 
@@ -190,12 +197,23 @@ h2{
 .sidebar-footer{
     height: var(--h-sidebar-footer);
     background-color: var(--bgc-sidebar);
+    padding-top: 5px;
     position: relative;
     z-index: 1;
 }
 
+.separator{
+    border-top: 1px solid white;
+    width: 100%;
+    margin: 0 20px;
+}
+
 .sb-icon.download img{
     height: 15px;
+}
+
+.sb-icon.download{
+    flex: 0 0 auto
 }
 
 .sb-icon.profile{
@@ -208,6 +226,9 @@ h2{
 .sb-icon.profile img{
     height: 20px;
 }
+
+/******************************************************************************/
+
 
 /* HEADER */
 header{
@@ -284,6 +305,68 @@ h2 + span{
 footer{
     height: var(--h-footer);
     background-color: var(--grigio-1);
-    /* position: relative; */
-    /* z-index: 1; */
-    } 
+    padding: 5px;
+    gap: 5px;
+    font-size: var(--font-size-s);
+}
+
+footer > div:last-child{
+    justify-content: flex-end;
+}
+
+.mw-250{
+    max-width: 250px;
+    align-items: center;
+    flex-grow: 1;
+
+}
+
+.mw-250 img{
+    height: 30px;  /*!ATTENZIONE*/ 
+    margin-right: 10px;
+}
+
+.space-between{
+    justify-content: space-between;
+}
+
+.addlike{
+    gap: 10px;
+    flex-direction: column;
+    font-size: var(--font-size-m);
+}
+
+.addlike a{
+    color: var(--grigio-4);
+}
+
+.play{
+    justify-content: center;
+    margin: 5px 10px;
+    gap: 20px;
+}
+
+.progressive-bar{
+    height: 3px;
+    width: 50%;
+    min-width: 50px;
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.bar-value{
+    height: 3px;
+    width: 30%;
+    background-color: white;
+    border-radius: 10px
+}
+
+.music-player div{
+    align-items: center;
+}
+
+.music-player{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

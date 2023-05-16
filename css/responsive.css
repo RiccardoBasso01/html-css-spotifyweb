@@ -42,6 +42,15 @@ XXL	≥1400 pixel */
     .sidebar-main{
         display: inline-block;
     }
+
+    .sidebar-footer li, .sidebar-footer .sb-icon.download{
+    justify-content: flex-start;
+
+    }
+
+    .addlike{
+        flex-direction: row;
+    }
 }
 
 /* SITO LAPTOP */
@@ -60,10 +69,10 @@ XXL	≥1400 pixel */
 
 
 
-/*! SIDEBAR-FOOTER SI FERMA A 560PX DI ALTEZZA*/
-@media screen and (max-height: 560px){
+/*! SIDEBAR-FOOTER SI FERMA A 540PX DI ALTEZZA*/
+@media screen and (max-height: 540px){
     .sidebar-footer{
-        margin-top: calc(560px - 160px);
+        margin-top: calc(540px - (var(--h-sidebar-footer) + var(--h-footer)));
         position: sticky;
         bottom: 0;
     }
