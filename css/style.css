@@ -27,6 +27,7 @@ body{
     --light-blue:#b4d0e7;
     --bgc-hover-button-blue: #5d9bff;
     --bgc-hover-nav: #eee9e2;
+    --spotify-green: #1dd05d;
     --p-15: 15px;
     --p-col: 10px;
     --font-size-s:0.6rem;
@@ -77,6 +78,7 @@ body{
 
 img{
     max-width: 100%;
+    display: block;
 }
 
 ul{
@@ -95,6 +97,129 @@ span{
 
 h2{
     margin: 0 0 10px 10px;
+}
+
+/* EFFETTI */
+/* effetto in hover sugli album */
+.music-list-item:hover .music-img::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.music-list-item.artist:hover .music-img::before{
+    border-radius: 50%;
+}
+
+.music-list-item:hover .enter-album{
+    display: inline-block;
+}
+
+.music-img{
+    position: relative;
+}
+
+.enter-album{
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+/* cambio colore in hover link */
+.sidebar a:hover{
+    color: white;
+}
+
+.spotify-main-menu a:hover{
+    color: white;
+}
+
+.add-playlist:hover .add-playlist-icon{
+    background-color: white;
+}
+
+/* effetto in hover button header */
+.button:hover{
+    transform: scale(1.2);
+}
+
+/* link sottotitolati in hover parte sinistra footer */
+.music-title:hover span{
+    text-decoration: underline;
+}
+
+.fa-heart:hover{
+    color: white;
+}
+
+.fa-folder:hover{
+    color: white;
+}
+
+/* effetto in hover simbolo play parte centrale footer */
+.music-player .fa-circle-play:hover{
+    transform: scale(1.2);
+}
+
+/* effetto in hover barra progressiva footer */
+.progressive-bar:hover .bar-value::after{
+    content: '\f111';
+    /*!Codice copiato dalla documentazione di font awesome*/
+    /* display: inline-block;  
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased; */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 30%;
+    transform: translateX(-50%) translateY(calc(-50% + 1px));
+}
+
+.progressive-bar:hover{
+    cursor: pointer;
+}
+
+.progressive-bar:hover .bar-value{
+    background-color: var(--spotify-green);
+}
+
+/* bordo a sinistra sulle icone della sidebar in hover */
+.sidebar-nav li:active,
+.sidebar-nav li:hover{
+    border-left: 3px solid  var(--spotify-green);
+    position: relative;
+    right: 2px;
+}
+
+/* testo sottotiloato lista main menu in hover */
+.spotify-main-menu li{
+    position: relative;
+}
+
+.spotify-main-menu li:hover::after{
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--spotify-green);
+    border-radius: 10px;
+}
+
+/* cambio colore in hover al logo */
+#logo-small:hover,
+#logo:hover{
+    filter: invert(54%) sepia(37%) saturate(992%) hue-rotate(89deg) brightness(113%) contrast(85%);
 }
 /* MAIN CONTAINER */
 #main-container{
@@ -136,8 +261,8 @@ h2{
     margin: 10px 0;
 }
 
-.sidebar a:not(:last-child){
-    color: var(--grigio-4);
+.sidebar a{
+    color: var(--grigio-3);
 }
 
 .sb-icon{
@@ -227,8 +352,6 @@ h2{
     height: 20px;
 }
 
-/******************************************************************************/
-
 
 /* HEADER */
 header{
@@ -240,16 +363,18 @@ header{
     align-items: center;
     justify-content: flex-end;
     padding: 5px;
+    z-index: 1;
 
 }
 
 .button{
     border: 1px solid white;
     border-radius: 20px;
+    margin-right: 20px;
 }
 
 .button a{
-    padding: 10px;  /*!ATTENZIONE*/
+    padding: 10px 25px;  /*!ATTENZIONE*/
 }
 
 /* MAIN */
@@ -276,7 +401,7 @@ h2 + span{
 }
 
 .spotify-main-menu a{
-    color: var(--grigio-4);
+    color: var(--grigio-3);
 }
 
 .music-list{
@@ -291,6 +416,7 @@ h2 + span{
 
 .music-list-item{  /* ? Non è necessario usare flex, mia scelta */
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
     margin: 10px;
@@ -352,6 +478,7 @@ footer > div:last-child{
     min-width: 50px;
     background-color: grey;
     border-radius: 10px;
+    position: relative;
 }
 
 .bar-value{
@@ -360,6 +487,8 @@ footer > div:last-child{
     background-color: white;
     border-radius: 10px
 }
+
+
 
 .music-player div{
     align-items: center;
