@@ -10,20 +10,21 @@ XXL	≥1400 pixel */
 @media screen and (min-width:576px){
     .sidebar{
         flex: 0 0 250px;
+        padding-left: 15px;
     }
     
-    .header{
+    .sidebar-header{
         height: var(--h-header);
         display: flex;
         align-items: center;
     }
-
+    
     /* cambio lista sidebar */
-    .sidebar li{
+    .sidebar-nav li{
         justify-content: flex-start;
     }
 
-    .sidebar .description{
+    .sidebar .sb-item{
         display: inline-block;
     }
 
@@ -35,6 +36,11 @@ XXL	≥1400 pixel */
     #logo{
         display: inline-block;
         height: 50px;
+    }
+
+    /*! Sidebar main */
+    .sidebar-main{
+        display: inline-block;
     }
 }
 
@@ -49,5 +55,16 @@ XXL	≥1400 pixel */
 @media screen and (min-width: 1200px){
     .music-list li{
         flex-basis: calc(100% / 6);
+    }
+}
+
+
+
+/*! SIDEBAR-FOOTER SI FERMA A 560PX DI ALTEZZA*/
+@media screen and (max-height: 560px){
+    .sidebar-footer{
+        margin-top: calc(560px - 160px);
+        position: sticky;
+        bottom: 0;
     }
 }

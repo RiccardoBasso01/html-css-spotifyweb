@@ -16,32 +16,96 @@
 </head>
 <body>
     <div id="main-container" class="display-flex">
+        <!-- SIDEBAR -->
         <div class="sidebar">
-            <div class="header">
-                <img id="logo-small" src="img/logo-small.svg" alt="logo-small">
-                <img id="logo" src="img/logo.svg" alt="logo">
-            </div>
+            <div class="upper-sidebar">
 
-            <ul>
-                <li>
-                    <div class="icon">
-                        <i class="fa-solid fa-house"></i>
-                    </div>
-                    <div class="description">Home</div>
-                </li>
-                <li>
-                    <div class="icon">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </div>
-                    <div class="description">Home</div>
-                </li>
-                <li>
-                    <div class="icon">
-                        <i class="fa-solid fa-book"></i>
-                    </div>
-                    <div class="description">Home</div>
-                </li>
-            </ul>
+                <!-- SIDEBAR HEADER -->
+                <div class="sidebar-header">
+                    <a href="#"><img id="logo-small" src="img/logo-small.svg" alt="logo-small"></a>
+                    <a href="#"><img id="logo" src="img/logo.svg" alt="logo"></a>
+                </div>
+                
+                <!-- SIDEBAR-NAV -->
+                <div class="sidebar-nav">
+                    <ul>
+                        <li>
+                            <a href="#" class="sb-icon">
+                                <img src="img/home.svg" alt="home">
+                            </a>
+                            <a href="#" class="sb-item">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sb-icon">
+                                <img src="img/search.svg" alt="search">
+                            </a>
+                            <a href="#" class="sb-item">Cerca</a>
+                        </li>
+                        <li>
+                            <a href="#" class="sb-icon">
+                                <img src="img/libreria.svg" alt="library">
+                            </a>
+                            <a href="#" class="sb-item">La tua libreria </a>
+                        </li>
+                    </ul>
+                </div>
+            
+                <!-- SIDEBAR-MAIN -->
+                <div class="sidebar-main">
+                    <h4>PLAYLIST</h4>
+
+                    <a href="#" class="add-playlist display-flex">
+                        <div class="add-playlist-icon">
+                            <i class="fa-solid fa-plus fa-2x"></i>
+                        </div>
+                        <span>Crea Playlist</span>
+
+                    </a>
+                    
+                </div>
+                <ul class="sidebar-main playlist">
+                    <li>
+                        <a href="#" class="sd-item">Nome Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#" class="sd-item">Nome Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#" class="sd-item">Nome Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#" class="sd-item">Nome Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#" class="sd-item">Nome Playlist</a>
+                    </li>
+                    <li>
+                        <a href="#" class="sd-item">Nome Playlist</a>
+                    </li>
+
+                </ul>
+                
+                
+            </div>
+                
+                <!-- SIDEBAR-FOOTER -->
+            <div class="sidebar-footer">
+                
+                <ul>
+                    <li>
+                        <a href="#" class="sb-icon download">
+                            <img src="img/download.svg" alt="download">
+                        </a>
+                        <a href="#" class="sb-item">Home</a>
+                    </li>
+                    <li>
+                        <a href="#" class="sb-icon profile">
+                            <img src="img/profile.svg" alt="profile">
+                        </a>
+                        <a href="#" class="sb-item">Home</a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <div class="spotify-main-content grow-1">
